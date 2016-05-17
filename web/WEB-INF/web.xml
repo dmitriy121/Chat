@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>GetListMessages</servlet-name>
+		<servlet-class>HTTPGetListMessages</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetListMessages</servlet-name>
+		<url-pattern>/getlistmessages</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetListUsers</servlet-name>
+		<servlet-class>HTTPGetListUsers</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetListUsers</servlet-name>
+		<url-pattern>/getlistusers</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetUserFromList</servlet-name>
+		<servlet-class>HTTPGetListUsers</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetUserFromList</servlet-name>
+		<url-pattern>/removeusertatus</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Add</servlet-name>
+		<servlet-class>HTTPUserMessage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Add</servlet-name>
+		<url-pattern>/addmessage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Users</servlet-name>
+		<servlet-class>HTTPUserAddition</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Users</servlet-name>
+		<url-pattern>/addUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Authorization</servlet-name>
+		<servlet-class>HTTPUserAuthorization</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Authorization</servlet-name>
+		<url-pattern>/authorize</url-pattern>
+	</servlet-mapping>
+
+</web-app>
